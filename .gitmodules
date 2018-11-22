@@ -1,3 +1,12 @@
 [submodule "themes/hugo-paper"]
 	path = themes/hugo-paper
 	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/hyde-hyde"]
+	path = themes/hyde-hyde
+	url = https://github.com/htr3n/hyde-hyde.git
+[submodule "themes/simplicity"]
+	path = themes/simplicity
+	url = https://github.com/eshlox/simplicity.git
+[submodule "themes/hugrid"]
+	path = themes/hugrid
+	url = https://github.com/aerohub/hugrid
