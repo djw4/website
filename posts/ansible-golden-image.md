@@ -14,6 +14,6 @@ To this end it might make sense to keep your 'golden image' for the config file 
 
 The Ansible playbook below does just that; it replaces the existing configuration file with one from a repository, but before doing so it extracts and registers some information from the outgoing config and places that in the new config.
 
-{{< gist djw4 0804423557a869a449c44853b4b1e4c7 >}}
+{% gist 0804423557a869a449c44853b4b1e4c7 %}
 
 In this case the example is for `SMTP_ALLOWUSER` but the same workflow is very repeatable for any other playbook that needs to transfer information.

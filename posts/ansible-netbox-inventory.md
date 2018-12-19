@@ -13,18 +13,17 @@ The only issue for us was - how to make use of this information? We already make
 
 To cut a long story short:
 
-* - Netbox exposes a REST API that can be polled for information.
-* - Ansible dynamic inventories are passed through to Ansible in JSON format.
+* Netbox exposes a REST API that can be polled for information.
+* Ansible dynamic inventories are passed through to Ansible in JSON format.
 
 The script included below is a dynamic inventory written in Python, however unfortunately at the moment it is only compatible with Python3. A few key points for this script to run properly:
 
-* - Custom fields are being used to filter IP addresses per 'operating system' and whether or not the IP address is the 'primary' address (no an alias). For example: 
- `"custom_fields": {"os": {"value": 3,"label": "linux-ubuntu"},"ip-type": {"value": 1,"label": "primary"}}`.
-* - We use the same SSH port for most servers - so this is baked into the config but easy to modify later if needed.
-* - The token is only necessary if your Netbox server is set up to require authentication when accessing data, normally this isn't required though (ie. public read-only).
+* Custom fields are being used to filter IP addresses per 'operating system' and whether or not the IP address is the 'primary' address (no an alias). For example: `"custom_fields": {"os": {"value": 3,"label": "linux-ubuntu"},"ip-type": {"value": 1,"label": "primary"}}`.
+* We use the same SSH port for most servers - so this is baked into the config but easy to modify later if needed.
+* The token is only necessary if your Netbox server is set up to require authentication when accessing data, normally this isn't required though (ie. public read-only).
 
 
-{{< gist djw4 ca3268dd1d13eeee1589f17ebc673a52 >}}
+{% gist ca3268dd1d13eeee1589f17ebc673a52 %}
 
 
 Ansible will use the flag `--list`, so you can simulate this by passing in that flag and the script will output something like this:
