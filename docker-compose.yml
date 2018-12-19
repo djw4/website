@@ -1,15 +1,17 @@
 version: "3"
 services:
   hexo:
-    image: ipple1986/hexo
+    #image: ipple1986/hexo
+    build: .
+    image: hexo
     deploy:
-      replicas: 1
-      #resources:
+      restart_policy:
+        condition: unless-stopped
+      # replicas: 1
+      # resources:
       #  limits:
       #    cpus: "0.25"
       #    memory: 128M
-      restart_policy:
-        condition: unless-stopped
     ports:
       - "4000:4000"
     volumes:
