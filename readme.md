@@ -3,7 +3,11 @@
 
 ```
 Alternatively use:
-docker run --name hexo -d -p 4000:4000 -v '/hexo/posts:/opt/hexo/ipple1986/source/_posts' -v '/hexo/themes:/opt/hexo/ipple1986/themes' -v '/hexo/_config.yml:/opt/hexo/ipple1986/_config.yml' ipple1986/hexo
+docker run --name hexo -d -p 4000:4000 \
+-v '/hexo/posts:/opt/hexo/ipple1986/source/_posts' \
+-v '/hexo/themes:/opt/hexo/ipple1986/themes' \
+-v '/hexo/_config.yml:/opt/hexo/ipple1986/_config.yml' \
+ipple1986/hexo
 ```
 
 ```
