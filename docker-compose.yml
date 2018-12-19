@@ -1,7 +1,7 @@
 version: "3"
 services:
   hexo:
-    #image: ipple1986/hexo
+    # image: ipple1986/hexo
     build: .
     image: hexo
     deploy:

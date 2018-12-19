@@ -8,7 +8,7 @@ MAINTAINER Daniel W &amp;lt;dw@danieljw.net&amp;gt;
 #RUN yum update -y -q
 
 WORKDIR /opt/hexo/ipple1986
-RUN npm install hexo-deployer-sftp --save
+RUN npm install hexo-deployer-ftpsync --save
   
 #COPY_FROM
 

@@ -32,3 +32,14 @@ theme_config:
   gravatar:
     email: dw@danieljw.net
 
+# deploy:
+#   type: ftpsync
+#   host: remote.danieljw.net
+#   user: <user>
+#   pass: <password>
+#   remote: [/usr/share/caddy]
+#   port: [21]
+#   ignore: [ignore]
+#   connections: [5]
+#   verbose: [true]
+#   # https://hexo.io/docs/deployment#FTPSync
