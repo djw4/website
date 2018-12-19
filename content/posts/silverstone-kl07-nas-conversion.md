@@ -30,7 +30,7 @@ After many different iterations I've finally settled on [UNraid](https://lime-te
 -   Device pass through to VMs and docker containers (any PCIe device
     including a GPU, USB devices, etc).
 
-![UNraid Dashboard](assets/unraid-f9979514.png)
+![UNraid Dashboard](static/unraid-f9979514.png)
 
 You can see above that the interface for UNraid is nice and clean, and partitioned into sections such as 'Apps' (VMs and docker containers), statistics, partity status, etc. Other pages show you more specific information the array and how it's functioning, whilst also providing controls for stopping and starting the array amongst other things. I urge you to download the software and try it out - you won't be disappointed.
 
@@ -41,7 +41,7 @@ Yes it's [paid software](https://lime-technology.com/pricing/) but the 30 day tr
 The second main part to this setup is the case, that being the recently released [Silverstone
 KL07](http://www.silverstonetek.com/product.php?area=en&pid=680). Whilst not initially billed as a 'server case' it is remarkably well set up out of the box for this purpose and I haven't yet figured out why more people aren't using the case for their home servers. Advantages include:
 
-![KL07 Front](assets/b490e258-kl07-1.jpg)
+![KL07 Front](static/b490e258-kl07-1.jpg)
 
 -   Factory fitted noise dampening foam.
 -   No window at all (plus or minus depending on your taste).
