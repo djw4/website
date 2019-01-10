@@ -11,6 +11,6 @@ ipple1986/hexo
 ```
 
 ```
-Add  #  git submodule add https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
-Update  #  git submodule update --init --recursive
+Add a sub-module          #  git submodule add https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+Update all sub-modules    #  git submodule update --init --recursive
 ```
