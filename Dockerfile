@@ -1,5 +1,5 @@
 FROM ipple1986/hexo
-MAINTAINER Daniel W &amp;lt;dw@danieljw.net&amp;gt;
+MAINTAINER Daniel W &amp;lt;github@danieljw.net&amp;gt;
 
 WORKDIR /opt/hexo/ipple1986
 RUN npm install hexo-deployer-ftpsync --save  
