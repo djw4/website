@@ -6,25 +6,16 @@ permalink: posts/:post_title/
 
 theme: cactus
 theme_config:
-  nav:
-    home: /
-    projects: https://github.com/djw4
+  nav: { home: /, projects: https://github.com/djw4}
   colorscheme: white
-  posts_overview:
-    show_all_posts: true
-  social_links:
-    github: http://github.com/djw4
-    linkedin: https://www.linkedin.com/in/djw1
+  posts_overview: { show_all_posts: true }
+  social_links: { github: http://github.com/djw4, linkedin: https://www.linkedin.com/in/djw1 }
   projects_url: http://github.com/djw4
   rss: false
-  disqus:
-    enabled: false
-  google_analytics:
-    enabled: false
-  baidu_analytics:
-    enabled: false
-  gravatar:
-    email: dw@danieljw.net
+  disqus: { enabled: false }
+  google_analytics: { enabled: false }
+  baidu_analytics: { enabled: false }
+  gravatar: [ email: dw@danieljw.net ]
 
 # deploy:
 #   type: ftpsync
