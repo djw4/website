@@ -1,13 +1,10 @@
 FROM ipple1986/hexo
-MAINTAINER Daniel W &amp;lt;github@danieljw.net&amp;gt;
+LABEL author="Daniel W" email="github@danieljw.net"
 
 WORKDIR /opt/hexo/ipple1986
 RUN npm install hexo-deployer-ftpsync --save  
 
-CMD ["/usr/bin/hexo", "generate"]
-CMD ["/usr/bin/hexo", "serve"]
-
-
+CMD ["/usr/bin/hexo", "generate", "&&", "/usr/bin/hexo", "serve"]
 
 
 # ENV HOME /root
