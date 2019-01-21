@@ -1,5 +1,5 @@
 FROM ipple1986/hexo
-LABEL author="Daniel W" email="github@danieljw.net"
+LABEL multi.author="Daniel W" multi.email="github@danieljw.net"
 
 WORKDIR /opt/hexo/ipple1986
 RUN npm install hexo-deployer-ftpsync --save  
