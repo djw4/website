@@ -1,7 +1,10 @@
 FROM ipple1986/hexo
 LABEL multi.author="Daniel W" multi.email="github@danieljw.net"
 
-WORKDIR /opt/hexo/ipple1986
+#WORKDIR /opt/hexo/ipple1986
+RUN ln -s /opt/hexo/ipple1986 /app
+
+WORKDIR /app
 RUN npm install hexo-deployer-ftpsync --save  
 
 CMD ["/usr/bin/hexo", "generate", "&&", "/usr/bin/hexo", "serve"]
