@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+  <meta name="description" content="A collection of things that I’ve worked on and interesting projects that you may find useful.">
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.danieljw.net/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.danieljw.net/favicon-32x32.png">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.danieljw.net/favicon-16x16.png">
+
+  
+  <link rel="manifest" href="https://www.danieljw.net/site.webmanifest">
+
+  
+  <link rel="mask-icon" href="https://www.danieljw.net/safari-pinned-tab.svg" color="#5bbad5">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="stylesheet" href="https://www.danieljw.net/css/bootstrap.min.css" />
+
+  
+  <title>Configing Pushover with ZNC-Push on Centos 7 | danieljw.net</title>
+  
+
+  <style>
+body {
+  min-width: 300px;
+}
+
+.custom-navbar {
+  margin-bottom: 1em;
+  height: 60px;
+}
+
+.custom-navbar a {
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: 1em; 
+  font-weight: bold; 
+}
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  text-decoration: none; 
+}
+
+@media print {
+  .custom-navbar {
+    display: none;
+  }
+}
+
+article {
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  background-color: #FAFAFA;
+}
+
+
+
+body {
+  color: #212529;
+}
+
+
+
+a {
+  color: #007bff;
+}
+
+
+
+a:hover,
+a:focus {
+  color: #0056b3;
+}
+
+
+
+.custom-navbar {
+  background-color: #336699;
+}
+
+
+
+.custom-navbar a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+
+.container {
+  max-width: 800px;
+}
+
+
+
+pre {
+  display: block;
+  padding: 9.5px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+code {
+  padding: 2px 4px;
+  color: inherit; 
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .9em;
+}
+
+
+
+blockquote,
+.blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 1em;
+  border-left: 5px solid #6c757d;
+}
+
+</style>
+</head>
+
+<body>
+  <nav class="custom-navbar">
+  <div class="container">
+    
+    <a href="/">Posts</a>
+    
+    <a href="https://github.com/djw4">Projects</a>
+    
+  </div>
+</nav>
+  
+  <div class="container">
+    <article>
+      <h1>Configing Pushover with ZNC-Push on Centos 7</h1>
+<p>
+  <small class="text-secondary">
+  
+  
+  Jan 16, 2019
+  </small>
+  
+</p>
+
+
+<p>In some certain use organisations and private groups, IRC is still the best tool to allow groups of users communicate with one another - however it does have it&rsquo;s limitations. In this day and age, using IRC on a mobile device can be a pain to configure and some apps lack in functionality but there can be a need to ensure messages are received whilst a client is offline.</p>
+
+<p>Traditionally this has been the domain of a &lsquo;bouncer&rsquo; to collect and store messages for offline users, so that the messages can be received when the user signs in again. This tried and tested message has been the defacto standard for IRC usage for many years, however unless a user logs into the server to check for any new messages - the messages will sit there indefinitely.</p>
+
+<p>To compliment the bouncer we will use <a href="https://github.com/jreese/znc-push">ZNC-Push</a> to ensure that messages matching filters that we specify will be forwarded onto our chosen devices. The installation process is as follows:</p>
+
+<h4 id="preparation">Preparation</h4>
+
+<p>To ensure the server has the necessary packages required to compile the module, install the necessary packages with:</p>
+
+<pre><code>$ yum group install &quot;Development Tools&quot;
+$ yum install znc-devel git
+</code></pre>
+
+<h4 id="compiling-the-module">Compiling the module</h4>
+
+<p>To compile the module, clone the repository from Github to a directory on the server - then enter the directory and use <code>znc-buildmod</code>:</p>
+
+<pre><code>$ git clone https://github.com/jreese/znc-push.git
+$ cd znc-push
+$ znc-buildmod push.cpp
+</code></pre>
+
+<p>If the compile process is sucessful you should have a <code>push.so</code> file located in the same directory.</p>
+
+<h4 id="adding-the-module-to-znc">Adding the module to ZNC</h4>
+
+<p>Create the directory <code>modules</code> in the root directory of your ZNC installation.</p>
+
+<pre><code>$ mkdir /var/lib/znc/.znc/modules
+</code></pre>
+
+<p>If you&rsquo;ve installed ZNC from the repository then this is likely <code>/var/lib/znc/.znc</code>. You will also need to ensure the ownership of the directory and file are correct, as below.</p>
+
+<pre><code>$ cp push.so /var/lib/znc/.znc/modules
+$ chown -R znc:znc /var/lib/znc/.znc/modules
+</code></pre>
+
+<p>Lastly restart your ZNC service, for good measure.</p>
+
+<pre><code>systemctl restart znc
+</code></pre>
+
+<h4 id="configuring-the-module">Configuring the module</h4>
+
+<p><em>These installation steps have been extracted from the <a href="https://github.com/jreese/znc-push/blob/master/README.md">readme</a> in the repository.</em></p>
+
+<p>Before starting the module configuration process, first log into the Pushover control panel and create a new app - taking note of both the application key and your user key.</p>
+
+<ol>
+<li>Connect to your bouncer and load the module: <code>/msg *status loadmod --type=user push</code></li>
+<li>Tell ZNC-Push to use the <em>pushover</em> service: <code>/msg *push set service pushover</code></li>
+<li>Then tell ZNC-Push your user key: <code>/msg *push set username ugi...kyg</code></li>
+<li>Finally tell ZNC-Push your API Key: <code>/msg *push set ace...vt8</code></li>
+<li>Save your configuration by specifying a full path: <code>/msg *push save /var/lib/znc/.znc/pushover.config</code></li>
+</ol>
+
+<p>Each time you perform an activation you should get the output <code>Ok</code> from the bouncer.</p>
+
+<p>ZNC-Push is now active but won&rsquo;t yet send you messages - it requires some final configuration. We can easily fix this with <code>set</code>.</p>
+
+<ul>
+<li><code>/msg *push set last_active 15</code> &ndash; Only send messages through Pushover if the last message from the sending user is greater than x seconds (avoiding message spam).</li>
+<li><code>/msg *push set away_only yes</code> &ndash; Only send messages through Pushover if you are away (use the simpleaway module for this).</li>
+<li><code>/msg *push set highlight &lt;&lt;INSERT-YOUR-NIC-HERE&gt;&gt;</code> &ndash; Add your nic and any topics that you&rsquo;d like to be alerted on.</li>
+</ul>
+
+<p>You will now receive messages on all devices when messages have been sent to you that require your attention. You can configure the module to only send to specific devices of your choosing, check the readme for more information.</p>
+
+    </article>
+  </div>
+
+  
+  
+  
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-127724108-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#216942",
+      "text": "#b2d192"
+    },
+    "button": {
+      "background": "#afed71"
+    }
+  }
+})});
+</script>
+
+</body>
+
+</html>

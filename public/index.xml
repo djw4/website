@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>danieljw.net</title>
+    <link>https://www.danieljw.net/</link>
+    <description>Recent content on danieljw.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.danieljw.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automatically decrypt Unraid LUKS with AWS Secrets Manager</title>
+      <link>https://www.danieljw.net/posts/unraid-luks-aws-secretsmanager/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/unraid-luks-aws-secretsmanager/</guid>
+      <description>One function of unraid that I really enjoy is the ability to configure individual drives in the array with full disk encryption. This encrpytion method is always recommended if you are storing files long term that you wouldn&amp;rsquo;t want the general public to have access to.
+If you were to be robbed, and your server stolen - unless you had full disk encryption in place the files on that server would be accessible to anyone.</description>
+    </item>
+    
+    <item>
+      <title>Disable Mac OS dock animation</title>
+      <link>https://www.danieljw.net/posts/disable-mac-os-dock-animation/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/disable-mac-os-dock-animation/</guid>
+      <description>Automatically hiding the Dock is one of the more useful features you can enable if you work on a Mac with limited screen space. That experience can be improved by removing the auto-hide delay from the Dock in OS X, which reduces the delay from when a mouse is hovered near the Dock to when it’s displayed.
+Going one step further, you can remove the slide-in and slide-out animation all-together to make the hide/show process of the dock instantaneous.</description>
+    </item>
+    
+    <item>
+      <title>Configing Pushover with ZNC-Push on Centos 7</title>
+      <link>https://www.danieljw.net/posts/configure-pushover-with-znc-push/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/configure-pushover-with-znc-push/</guid>
+      <description>In some certain use organisations and private groups, IRC is still the best tool to allow groups of users communicate with one another - however it does have it&amp;rsquo;s limitations. In this day and age, using IRC on a mobile device can be a pain to configure and some apps lack in functionality but there can be a need to ensure messages are received whilst a client is offline.</description>
+    </item>
+    
+    <item>
+      <title>Ansible golden image config replacements</title>
+      <link>https://www.danieljw.net/posts/ansible-golden-image/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/ansible-golden-image/</guid>
+      <description>ConfigServer Security &amp;amp; Firewall is a popular wrapper for iptables, especially when used in conjunction with the hosting platform cPanel. The &amp;lsquo;firewall&amp;rsquo; itself is very feature rich and contains different abilities, some of which can be difficult to keep track of ..
+[root@server ~]# wc -l /etc/csf/csf.conf 2645 /etc/csf/csf.conf  To this end it might make sense to keep your &amp;lsquo;golden image&amp;rsquo; for the config file in version control in the event that settings change and need to be rolled back.</description>
+    </item>
+    
+    <item>
+      <title>Ansible inventory from Netbox</title>
+      <link>https://www.danieljw.net/posts/ansible-netbox-inventory/</link>
+      <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/ansible-netbox-inventory/</guid>
+      <description>We have been using the excellent Netbox IPAM and DCIM tool internally for tracking our networking configurations, as well as our backend infrastructure whilst also increasing the use of Ansible to remove repetetive tasks in the day-to-day. By utilising Netbox as the end-point for accessing service data, this gives us the opportunity to extrapolate the request for information from our billing and management server - siloing off our infrastructure automation behind a layer of security that was otherwise impossible.</description>
+    </item>
+    
+    <item>
+      <title>KL07 Drive Caddies</title>
+      <link>https://www.danieljw.net/posts/kl07-drive-caddies/</link>
+      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/kl07-drive-caddies/</guid>
+      <description>Whilst I had every intention of fully completing this project before using it, I really wanted to play Cities Skylines again as I&amp;rsquo;ve been playing it on my Dell XPS 13 2016 until now and the Intel graphics processor isn&amp;rsquo;t really up to the task.
+The main problem with throwing the GPU in straight away was the clearance of the GPU with the hard drives at the front of the case - there simply was not enough room to accomodate the lengthy card and also have the 2 5-bay drive caddies in their current position.</description>
+    </item>
+    
+    <item>
+      <title>Silverstone KL07 NAS Conversion</title>
+      <link>https://www.danieljw.net/posts/silverstone-kl07-nas-conversion/</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/silverstone-kl07-nas-conversion/</guid>
+      <description>UNraid Part of my role as a systems engineer involves the day to day maintenance of our backup systems, which as we&amp;rsquo;re a VMware shop mostly revolve around the Veeam Availability Suite (Backup &amp;amp; Replication in particular). Whilst fantastic in an enterprise setting, this kind of software package is not very well suited (see; not at all) for a home user. Instead over the last few years I&amp;rsquo;ve been continuously improving my home server to be more in line with my own personal needs.</description>
+    </item>
+    
+    <item>
+      <title>Cracking WPA/WPA2 Hashes using GPUs</title>
+      <link>https://www.danieljw.net/posts/wpa-password-cracking/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/wpa-password-cracking/</guid>
+      <description>Cracking WPA/WPA2 Hashes using GPUs
+Recently I have been investigating the most effective way to crack WPA passkeys, and I wanted to know - what is the most cost effective method for hashing the key; purchasing a GPU(s) or using a cloud based service such as AWS.
+I first began by capturing the 4-way handshake from the target AP using Kali Linux and airmon-ng, and stored this on my computer. I performed my baseline crack using a conventional system with the following specifications:</description>
+    </item>
+    
+    <item>
+      <title>Catalogue spam in cPanel</title>
+      <link>https://www.danieljw.net/posts/catalogue-spam-on-shared-hosting/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/catalogue-spam-on-shared-hosting/</guid>
+      <description>The first script below will search every user in /home on a cPanel server, and look for emails with the string ***SPAM*** which is injected by Apache SpamAssassin. The second script searches for instances in /var/log/maillog for the same information.
+#!/bin/bash TODAY=`date +&amp;quot;%Y-%m-%d&amp;quot;` OUTPUT=&amp;quot;/usr/local/apache/htdocs&amp;quot; touch $OUTPUT/$TODAY-mailboxspam.txt echo &amp;gt; $OUTPUT/$TODAY-mailboxspam.txt ### Search the filesystem grep -lrF ***SPAM*** /home/*/mail/ | sed &amp;quot;s/[^/]*$//&amp;quot; | \ awk &#39;{gsub(&amp;quot;new/|cur/&amp;quot;, &amp;quot;&amp;quot;);print}&#39; | \ awk &#39;{gsub(&amp;quot;.[tT]rash/&amp;quot;, &amp;quot;&amp;quot;);print}&#39; | \ awk &#39;{gsub(&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Count cPanel default emails</title>
+      <link>https://www.danieljw.net/posts/count-cpanel-default-emails/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/count-cpanel-default-emails/</guid>
+      <description>Recently a customer had an issue on their cPanel server whereby their MX records were overwritten and mail was sent to the &amp;lsquo;default&amp;rsquo; email address instead of to their Office365 addresses.
+To better understand what mail had been missed I used the following expression (domain removed for retain their privacy):
+grep -ir &amp;quot;***.com.au&amp;quot; /home/***/mail/cur/ \ grep -i &amp;quot;envelope-to&amp;quot; | \ grep -i -o &#39;[A-Z0-9._%+-]\[email protected][A-Z0-9.-]\+\.[A-Z]\&amp;amp;#123;2,4\&amp;amp;#125;&#39; | \ sort | uniq -c | sort -nr  This will return a sorted count of emails and their intended recipients, such as the following:</description>
+    </item>
+    
+    <item>
+      <title>Find disk usage by file type</title>
+      <link>https://www.danieljw.net/posts/find-disk-usage-by-filetype/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/find-disk-usage-by-filetype/</guid>
+      <description>The script shown below will search all users files of a specific file type, and compute the total disk usage (in bytes) of each file type. The information is presented in a CSV that can be documented or achived for graphing.
+The list of filetypes is drawn from a file referenced at the start of the script, edit this for your requirements.
+#!/bin/bash # Initialise filetypes list today=`date +&amp;quot;%Y-%m-%d&amp;quot;` filetypes=/scripts/filetypes exclude=/scripts/excludedir output=/usr/local/apache/htdocs/tools/&amp;quot;$today-computefiles.</description>
+    </item>
+    
+    <item>
+      <title>Finding and sorting cPanel catchall</title>
+      <link>https://www.danieljw.net/posts/finding-and-sorting-cpanel-catchall/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/finding-and-sorting-cpanel-catchall/</guid>
+      <description>In it&amp;rsquo;s default configuration cPanel&amp;rsquo;s email facilities have a feature called the &amp;lsquo;Default Address&amp;rsquo;, which accepts mail sent to a domain that didn&amp;rsquo;t match any available mailboxes on the server.
+Whilst great in theory it can prove problematic if not checked regularly by the customer or by the server administrator. Due to it&amp;rsquo;s inherent ability to accept mail from anyone, to anyone (at the domain) the default address will frequently fill up with spam emails which does nothing but soak up disk space on the server.</description>
+    </item>
+    
+    <item>
+      <title>Home snowboard waxing</title>
+      <link>https://www.danieljw.net/posts/home-snowboard-waxing/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/home-snowboard-waxing/</guid>
+      <description>Waxing your snowboard is never a bad idea, as it helps to improve the longevity of your board whilst also providing more speed and control on the mountain.
+Not everyone has the time and money to get the board waxed professionally so doing it at home is sometimes a better option. Using a cheap generic clothes iron you can get some pretty good results.
+In my case I&amp;rsquo;m using a cheap clothes iron from Kmart to apply my wax and it works very well.</description>
+    </item>
+    
+    <item>
+      <title>Mass download from wallhaven</title>
+      <link>https://www.danieljw.net/posts/mass-download-wallhaven/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/mass-download-wallhaven/</guid>
+      <description>I&amp;rsquo;m experimenting with creating spiders to crawl web pages and download content however in the mean time I thought I&amp;rsquo;d experiment with rudimentary bash tools to try and accomplish the same task.
+The script below will run through a number sequence of 1 to 999999 to append to the download link &amp;lt;https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-___.jpg&amp;gt; and try to download the file.
+#!/bin/bash # Scrape wallhaver.cc images using bash # Begin printf &#39;Hit [CTRL+C] to stop!</description>
+    </item>
+    
+    <item>
+      <title>PDF to eBook Conversion</title>
+      <link>https://www.danieljw.net/posts/pdf-to-ebook-conversion/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danieljw.net/posts/pdf-to-ebook-conversion/</guid>
+      <description>If you haven&amp;rsquo;t yet discovered humblebundle.com I would highly recommend that you do - as on this website you will discover that they publish &amp;lsquo;bundles&amp;rsquo; of games and books which are often great deals when compared to buying these items individually. The bundles are updated quite frequently and sometimes they include &amp;lsquo;comic&amp;rsquo; bundles.
+I recently picked up one of these comic bundles - &amp;lsquo;Humble Comics Bundle: Star Trek presented by IDW &amp;lsquo; which gave me a the opportunity to download (legally purchased) copies of some really cool old comic books.</description>
+    </item>
+    
+  </channel>
+</rss>
