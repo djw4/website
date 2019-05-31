@@ -1,7 +1,7 @@
 ---
-date: "2017-04-06"
 title: "PDF to eBook Conversion"
-
+draft: false
+date: "2012-04-06"
 ---
 
 If you haven't yet discovered [humblebundle.com](https://www.humblebundle.com/) I would highly recommend that you do - as on this website you will discover that they publish 'bundles' of games and books which are often great deals when compared to buying these items individually. The bundles are updated quite frequently and sometimes they include 'comic' bundles.

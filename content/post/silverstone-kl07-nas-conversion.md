@@ -30,7 +30,7 @@ After many different iterations I've finally settled on [UNraid](https://lime-te
 -   Device pass through to VMs and docker containers (any PCIe device
     including a GPU, USB devices, etc).
 
-![UNraid Dashboard](/static/unraid-f9979514.png)
+![Unraid Dashboard](/static/unraid-f9979514.jpg)
 
 You can see above that the interface for UNraid is nice and clean, and partitioned into sections such as 'Apps' (VMs and docker containers), statistics, partity status, etc. Other pages show you more specific information the array and how it's functioning, whilst also providing controls for stopping and starting the array amongst other things. I urge you to download the software and try it out - you won't be disappointed.
 

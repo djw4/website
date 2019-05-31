@@ -22,9 +22,7 @@ The script included below is a dynamic inventory written in Python, however unfo
 * We use the same SSH port for most servers - so this is baked into the config but easy to modify later if needed.
 * The token is only necessary if your Netbox server is set up to require authentication when accessing data, normally this isn't required though (ie. public read-only).
 
-
-{% gist ca3268dd1d13eeee1589f17ebc673a52 %}
-
+{{< gist djw4 ca3268dd1d13eeee1589f17ebc673a52 >}}
 
 Ansible will use the flag `--list`, so you can simulate this by passing in that flag and the script will output something like this:
 

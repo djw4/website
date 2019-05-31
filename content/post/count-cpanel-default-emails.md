@@ -33,3 +33,4 @@ This will return a sorted count of emails and their intended recipients, such as
 ```
 
 Syncing this email on with IMAP sync is a simple affair, but now we know where the best place to send the mail to to minimise any additional work in sorting.
+
