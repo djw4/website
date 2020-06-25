@@ -13,7 +13,7 @@ TIMEZONE = 'Australia/Melbourne'
 DEFAULT_LANG = 'en'
 
 THEME = "./theme"
-# GOOGLE_ANALYTICS = ''
+GOOGLE_ANALYTICS = 'UA-127724108-1'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
