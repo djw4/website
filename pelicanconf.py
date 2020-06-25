@@ -33,10 +33,15 @@ SOCIAL = (
           ('linkedin', 'https://www.linkedin.com/in/djw1/'),
          )
 
+PLUGIN_PATHS = [ './plugins', ]
 PLUGINS = [
   'pelican_gist',
+  'sitemap',
+  'css-html-js-minify',
+  'deadlinks',
   # 'optimize_images'
 ]
+DEADLINK_VALIDATION = True
 
 DEFAULT_PAGINATION = False
 
