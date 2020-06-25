@@ -9,7 +9,7 @@ This is a simple script that I've begun developing to output some useful informa
 
 Whilst fairly basic, the script looks like this:
 
-```
+```bash
 #!/bin/bash
 # cPanel Simple Monitor
 WEBROOT="/usr/local/apache/htdocs/tools/mail.txt"
@@ -19,7 +19,7 @@ echo `date` >> $WEBROOT
 echo Mailbox Auth: >> $WEBROOT
 perl -lsne '/$today.* \[([0-9.]+)\]:.+dovecot_(?:login|plain):([^\s]+).* for (.*)/ and $sender&#123;$2&#125;&#123;r&#125;+=scalar (split / /,$3) and $sender&#123;$2&#125;&#123;i&#125;&#123;$1&#125;=1; END &#123;foreach $sender(keys %sender)&#123;printf"Recip=%05d Hosts=%03d Auth=%s\n",$sender&#123;$sender&#125;&#123;r&#125;,scalar (keys %&#123;$sender&#123;$sender&#125;&#123;i&#125;&#125;),$sender;&#125;&#125;' -- -today=$(date +%F) /var/log/exim_mainlog | sort | tail -n 5 >> $WEBROOT
 echo --------------------------- >> $WEBROOT
-  ```
+```
 
 This should give you something like the following:
 

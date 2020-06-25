@@ -14,19 +14,19 @@ To compliment the bouncer we will use [ZNC-Push](https://github.com/jreese/znc-p
 
 To ensure the server has the necessary packages required to compile the module, install the necessary packages with:
 
-```
-$ yum group install "Development Tools"
-$ yum install znc-devel git
+```bash
+yum group install "Development Tools"
+yum install znc-devel git
 ```
 
 #### Compiling the module
 
 To compile the module, clone the repository from Github to a directory on the server - then enter the directory and use `znc-buildmod`:
 
-```
-$ git clone https://github.com/jreese/znc-push.git
-$ cd znc-push
-$ znc-buildmod push.cpp
+```bash
+git clone https://github.com/jreese/znc-push.git
+cd znc-push
+znc-buildmod push.cpp
 ```
 
 If the compile process is sucessful you should have a `push.so` file located in the same directory.
@@ -35,20 +35,20 @@ If the compile process is sucessful you should have a `push.so` file located in 
 
 Create the directory `modules` in the root directory of your ZNC installation. 
 
-```
-$ mkdir /var/lib/znc/.znc/modules
+```bash
+mkdir /var/lib/znc/.znc/modules
 ```
 
 If you've installed ZNC from the repository then this is likely `/var/lib/znc/.znc`. You will also need to ensure the ownership of the directory and file are correct, as below.
 
-```
-$ cp push.so /var/lib/znc/.znc/modules
-$ chown -R znc:znc /var/lib/znc/.znc/modules
+```bash
+cp push.so /var/lib/znc/.znc/modules
+chown -R znc:znc /var/lib/znc/.znc/modules
 ```
 
 Lastly restart your ZNC service, for good measure.
 
-```
+```bash
 systemctl restart znc
 ```
 
