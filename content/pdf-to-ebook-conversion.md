@@ -49,7 +49,7 @@ gswin64c.exe -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -d
 
 You will now end up with your original PDF with the filename 'bw-compressed' appended to it - but how much smaller is it?
 
-![windows explorer](/static/kt6iBib.png)
+![windows explorer]({static}/images/kt6iBib.png)
 
 - Original file-size: 2,569,993 KB (2.56 GB)
 - Grayscale version (bw): 150,334 KB (150 MB)

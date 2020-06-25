@@ -16,6 +16,6 @@ defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 
 You can enable the dock hiding by right-clicking the dock separator as below.
 
-![macos dock](/static/mac-c98sfd3.jpg)
+![macos dock]({static}/images/mac-c98sfd3.jpg)
 
 Your dock will close and re-open, and once you set 'Hiding' to on - the changes will become apparently immediately.
