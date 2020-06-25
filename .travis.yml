@@ -12,5 +12,5 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   bucket: $AWS_BUCKET_NAME
   region: $AWS_REGION
-  glob: 'output/*'
+  local_dir: output
   skip_cleanup: true
