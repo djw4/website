@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Mass download from wallhaven"
-
+category: posts
 ---
 
 I'm experimenting with creating spiders to crawl web pages and download content however in the mean time I thought I'd experiment with rudimentary bash tools to try and accomplish the same task.

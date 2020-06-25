@@ -1,7 +1,8 @@
 ---
 title: "PDF to eBook Conversion"
 draft: false
-date: "2012-04-06"
+date: 2012-04-06
+category: posts
 ---
 
 If you haven't yet discovered [humblebundle.com](https://www.humblebundle.com/) I would highly recommend that you do - as on this website you will discover that they publish 'bundles' of games and books which are often great deals when compared to buying these items individually. The bundles are updated quite frequently and sometimes they include 'comic' bundles.
@@ -48,7 +49,7 @@ gswin64c.exe -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -d
 
 You will now end up with your original PDF with the filename 'bw-compressed' appended to it - but how much smaller is it?
 
-![](/static/kt6iBib.png)
+![windows explorer](/static/kt6iBib.png)
 
 - Original file-size: 2,569,993 KB (2.56 GB)
 - Grayscale version (bw): 150,334 KB (150 MB)

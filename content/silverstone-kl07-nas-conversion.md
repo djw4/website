@@ -1,7 +1,7 @@
 ---
-date: "2017-03-06"
+date: 2017-03-06
 title: "Silverstone KL07 NAS Conversion"
-
+category: posts
 ---
 
 ### UNraid
@@ -71,6 +71,6 @@ I have dispensed with the CD & DVD drive 'ledge' mechanism to clean things up a 
 
 Everything went very smoothly, and I'm pretty happy with the results.
 
-![](https://i.imgur.com/TAoMvg4l.jpg)
-![](https://i.imgur.com/yRVGjVfl.jpg)
-![](https://i.imgur.com/ZCkjuMAl.jpg)
+![internal image](https://i.imgur.com/TAoMvg4l.jpg)
+![internal image](https://i.imgur.com/yRVGjVfl.jpg)
+![internal image](https://i.imgur.com/ZCkjuMAl.jpg)

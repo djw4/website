@@ -1,8 +1,8 @@
 ---
-date: "2013-03-06"
+date: 2013-03-06
 title: "Simple Exim monitoring"
 draft: true
-
+category: posts
 ---
 
 This is a simple script that I've begun developing to output some useful information from the Exim logs that can be used for analysis of emails being sent via SMTP authentication.

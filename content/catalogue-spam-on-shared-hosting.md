@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Catalogue spam in cPanel"
-
+category: posts
 ---
 
 The first script below will search every user in `/home` on a cPanel server, and look for emails with the string `***SPAM***` which is injected by Apache SpamAssassin. The second script searches for instances in `/var/log/maillog` for the same information.

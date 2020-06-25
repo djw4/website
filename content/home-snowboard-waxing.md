@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Home snowboard waxing"
-
+category: posts
 ---
 
 Waxing your snowboard is never a bad idea, as it helps to improve the longevity of your board whilst also providing more speed and control on the mountain.

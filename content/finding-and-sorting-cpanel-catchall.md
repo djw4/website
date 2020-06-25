@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Finding and sorting cPanel catchall"
-
+category: posts
 ---
 
 In it's default configuration cPanel's email facilities have a feature called the 'Default Address', which accepts mail sent to a domain that didn't match any available mailboxes on the server.

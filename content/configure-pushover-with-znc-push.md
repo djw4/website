@@ -1,7 +1,7 @@
 ---
-date: "2019-01-16"
+date: 2019-01-16
 title: "Configing Pushover with ZNC-Push on Centos 7"
-
+category: posts
 ---
 
 In some certain use organisations and private groups, IRC is still the best tool to allow groups of users communicate with one another - however it does have it's limitations. In this day and age, using IRC on a mobile device can be a pain to configure and some apps lack in functionality but there can be a need to ensure messages are received whilst a client is offline.

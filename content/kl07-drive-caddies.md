@@ -1,7 +1,7 @@
 ---
-date: "2017-03-22"
+date: 2017-03-22
 title: "KL07 Drive Caddies"
-
+category: posts
 ---
 
 Whilst I had every intention of fully completing this project before using it, I really wanted to play Cities Skylines again as I've been playing it on my Dell XPS 13 2016 until now and the Intel graphics processor isn't really up to the task.

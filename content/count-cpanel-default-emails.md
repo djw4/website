@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Count cPanel default emails"
-
+category: posts
 ---
 
 Recently a customer had an issue on their cPanel server whereby their MX records were overwritten and mail was sent to the 'default' email address instead of to their Office365 addresses.

@@ -1,19 +1,16 @@
-FROM ipple1986/hexo
+FROM python:3
 LABEL multi.author="Daniel W" multi.email="github@danieljw.net"
 
-#WORKDIR /opt/hexo/ipple1986
-RUN ln -s /opt/hexo/ipple1986 /app
+WORKDIR /usr/src/app
 
-WORKDIR /app
-RUN npm install hexo-deployer-ftpsync --save  
+RUN apt update
+RUN apt install git
+# RUN apt install libjpeg-progs optipng
 
-CMD ["/usr/bin/hexo", "generate", "&&", "/usr/bin/hexo", "serve"]
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
+# COPY . .
 
-# ENV HOME /root
-# ENV DEBIAN_FRONTEND noninteractive
-# RUN yum clean all
-# RUN yum update -y -q
-# COPY_FROM
-# CMD ["python", "app.py"]
-# CMD ["/bin/bash"]
+# CMD [ "python", "./your-daemon-or-script.py" ]
+CMD ["/bin/bash"]

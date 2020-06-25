@@ -1,7 +1,7 @@
 ---
-date: "2012-04-06"
+date: 2012-04-06
 title: "Find disk usage by file type"
-
+category: posts
 ---
 
 The script shown below will search all users files of a specific file type, and compute the total disk usage (in bytes) of each file type. The information is presented in a CSV that can be documented or achived for graphing.

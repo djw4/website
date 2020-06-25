@@ -1,27 +1,9 @@
 version: "3"
 services:
-  hexo:
-    # image: ipple1986/hexo
+  python:
     build: .
-    image: hexo
-    deploy:
-      restart_policy:
-        condition: unless-stopped
-      replicas: 1
-      resources:
-       limits:
-         cpus: "0.25"
-         memory: 256M
     ports:
-      - "4000:4000"
+      - "8000:8000"
     volumes:
-      - './_config.yml:${HEXO_PATH}/_config.yml'
-      - "./themes:${HEXO_PATH}/themes"
-      - './static:${HEXO_PATH}/source/static'
-      - './public:${HEXO_PATH}/public:rw'
-      - './posts:${HEXO_PATH}/source/_posts'
-    networks:
-      - dnet  
-
-networks: 
-  dnet:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
