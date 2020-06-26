@@ -4,6 +4,7 @@ python:
   - '3.6'
 install:
   - make build-images
+  - make build-theme
 script:
   - make build
 deploy:

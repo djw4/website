@@ -42,6 +42,9 @@ help:
 build-images:
 	@docker-compose build
 
+build-theme:
+	@[ -d theme ] || git clone https://github.com/djw4/website-theme.git theme
+
 build:
 	@docker-compose run --rm python make html
 
