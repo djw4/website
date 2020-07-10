@@ -22,15 +22,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-# LINKS = (
-#           ('Projects', 'https://github.com/djw4/'),
-#         )
-
-# Social widget
 SOCIAL = (
-          ('github', 'https://github.com/djw4'),
-          ('linkedin', 'https://www.linkedin.com/in/djw1/'),
+          ('GitHub', 'https://github.com/djw4'),
+          ('LinkedIn', 'https://www.linkedin.com/in/djw1/'),
          )
 
 PLUGIN_PATHS = [ './plugins', ]
@@ -42,8 +36,8 @@ PLUGINS = [
   'clean_summary',
   # 'optimize_images'
 ]
-DEADLINK_VALIDATION = True
 
+DEADLINK_VALIDATION = True
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
