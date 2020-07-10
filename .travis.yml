@@ -15,3 +15,6 @@ deploy:
   region: $AWS_REGION
   local_dir: output
   skip_cleanup: true
+branches:
+  only:
+    - master
