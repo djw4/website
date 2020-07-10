@@ -1,6 +1,6 @@
 ---
 date: 2013-03-06
-title: "Simple Exim monitoring"
+title: Simple Exim monitoring
 draft: true
 category: posts
 ---

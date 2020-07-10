@@ -1,6 +1,6 @@
 ---
 date: 2016-11-21
-title: "Cracking WPA/WPA2 Hashes using GPUs"
+title: Cracking WPA/WPA2 Hashes using GPUs
 category: posts
 ---
 

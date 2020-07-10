@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Finding and sorting cPanel catchall"
+title: Finding and sorting cPanel catchall
 category: posts
 ---
 

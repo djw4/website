@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Find disk usage by file type"
+title: Find disk usage by file type
 category: posts
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2017-03-06
-title: "Silverstone KL07 NAS Conversion"
+title: Silverstone KL07 NAS Conversion
 category: posts
 ---
 

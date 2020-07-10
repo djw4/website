@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Count cPanel default emails"
+title: Count cPanel default emails
 category: posts
 ---
 

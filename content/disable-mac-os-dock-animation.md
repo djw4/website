@@ -1,6 +1,6 @@
 ---
 date: 2019-01-17
-title: "Disable Mac OS dock animation"
+title: Disable Mac OS dock animation
 category: posts
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Home snowboard waxing"
+title: Home snowboard waxing
 category: posts
 ---
 

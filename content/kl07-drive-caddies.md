@@ -1,6 +1,6 @@
 ---
 date: 2017-03-22
-title: "KL07 Drive Caddies"
+title: KL07 Drive Caddies
 category: posts
 ---
 

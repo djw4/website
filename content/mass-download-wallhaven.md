@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Mass download from wallhaven"
+title: Mass download from wallhaven
 category: posts
 ---
 

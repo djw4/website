@@ -1,6 +1,6 @@
 ---
 date: 2018-11-09
-title: "Ansible inventory from Netbox"
+title: Ansible inventory from Netbox
 category: posts
 ---
 

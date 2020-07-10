@@ -1,6 +1,6 @@
 ---
 date: 2012-04-06
-title: "Catalogue spam in cPanel"
+title: Catalogue spam in cPanel
 category: posts
 ---
 

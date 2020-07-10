@@ -1,6 +1,6 @@
 ---
 date: 2019-01-16
-title: "Configing Pushover with ZNC-Push on Centos 7"
+title: Configing Pushover with ZNC-Push on Centos 7
 category: posts
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Ansible golden image config replacements"
+title: Ansible golden image config replacements
 draft: false
 date: 2018-11-20
 category: posts

@@ -1,6 +1,6 @@
 ---
 date: 2019-01-27
-title: "Automatically decrypt Unraid LUKS with AWS Secrets Manager"
+title: Automatically decrypt Unraid LUKS with AWS Secrets Manager
 draft: false
 category: posts
 ---
