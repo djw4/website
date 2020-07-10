@@ -39,6 +39,7 @@ PLUGINS = [
   'sitemap',
   'css-html-js-minify',
   'deadlinks',
+  'clean_summary',
   # 'optimize_images'
 ]
 DEADLINK_VALIDATION = True
