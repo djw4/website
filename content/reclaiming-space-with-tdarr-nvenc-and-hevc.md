@@ -8,7 +8,7 @@ category: posts
 
 Last weekend I was searching through my Plex server looking for something to watch and despite having several hundred movies on file, I couldn't find anything that I really felt like watching. Some days later I was performing some routine maintenance on the Unraid server and was reminded that I only had a mere 1.57TB remaining before I would need to purchase a new drive to expand the array (or upgrade an existing drive).
 
-These two instances combined kick-started a thought in my head -- _'most of the movies in my collection I most likely will never watch again, so why don't I just delete what I don't need?'
+These two instances combined kick-started a thought in my head - _most of the movies in my collection I most likely will never watch again .. so why don't I just delete what I don't need?_
 
 As a self-diagnosed digital hoarder this idea seemed a little extreme to me so I thought about other viable options and eventually settled on the idea of _reclaiming_ space on the array back by converting my media collection _en-masse_ HEVC (H265) to take advantage of the smaller file sizes. Once I have a reclaimed some space I will be able to remove any content that I really don't think I will ever need again (or can redownload if needed) and potentially avoid purchasing a new disk.
 
