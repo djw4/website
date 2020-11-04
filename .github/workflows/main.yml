@@ -31,5 +31,5 @@ jobs:
           aws_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
           aws_bucket: ${{ secrets.AWS_BUCKET_NAME }}
-          source_dir: $GITHUB_WORKSPACE/output
+          source_dir: output
           destination_dir: test
