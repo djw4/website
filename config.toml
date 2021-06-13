@@ -1,47 +1,5 @@
-baseURL = "https://www.danieljw.net"
+baseURL = "https://www.danieljw.net/"
 languageCode = "en-us"
-title = "danieljw.net"
-theme = "minimal-bootstrap-hugo-theme"
-enableGitInfo = false
-staticDir = ["static", "/content/img"]
-
-[taxonomies]
-  tag = "tags"
-
-pygmentsCodefences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "pygments"
-
-[permalinks]
-  post = "/posts/:filename/"
-
-[params]
-  description = "A collection of things that I’ve worked on and interesting projects that you may find useful."
-  contentBackgroundColor = "#FAFAFA"
-  contentTextColor = "#212529"
-  contentLinkColor = "#007bff"
-  contentLinkHoverColor = "#0056b3"
-  navbarBackgroundColor = "#336699"
-  navbarLinkColor = "rgba(255, 255, 255, 0.75)"
-  navbarLinkHoverColor = "rgba(255, 255, 255, 1)"
-  wrapperMaxWidth = "800px"
-  customDateFormat = "Jan 2, 2006"
-  customCodeStyle = true
-  customBlockquoteStyle = true
-  showPostSummary = true
-  # googleAnalytics = "UA-127724108-1"
-  cookieConsent = false
-  includeBootstrapJs = false
-  faviconSafariPinnedTabColor = "#5bbad5"
-  faviconMsApplicationTileColor = "#da532c"
-  faviconThemeColor = "#ffffff"
-
-[menu]
-  [[menu.nav]]
-  name = "Posts"
-  url = "/"
-  weight = 1
-  [[menu.nav]]
-  name = "Projects"
-  url = "https://github.com/djw4"
-  weight = 2
+title = "danieljw"
+theme = "hugo-tania"
+staticDir = "static"
