@@ -1,3 +1,11 @@
-To generate the site run `make html` and the site will be generated in the `output` directory.
+# danieljw.net
 
-If running within a CI/CD pipeline, use Docker- `make build` which in turn then runs `docker-compose run --rm python make html` per 3muskteers.io.
+## Install
+
+1. `brew install hugo`
+2. `git submodule update --init --recursive`
+3. `hugo serve`
+
+## Update Theme
+
+1. `git submodule update --recursive --remote`
