@@ -30,11 +30,7 @@ Inspiration for this process was the great tutorial available by Spaceinvader On
 1. Click on your newly created secret, and make a note of the 'ARN' (Amazon Resource Number) - this is the full identifier to this resource and we will need it later. 
 2. Next use the search again to find the 'IAM' module, then click 'Users -> Add user'.
 3. Give your user a name (not really important, but name it appropriately), and tick 'Programmatic access' then click next.
-<<<<<<< HEAD:content/posts/unraid-luks-aws-secretsmanager.md
 ![aws708](/img/unraid-luks-aws708.jpg)
-=======
-![aws708]({static}/images/unraid-luks-aws708.jpg)
->>>>>>> master:content/unraid-luks-aws-secretsmanager.md
 
 7. Click on 'Attach existing policies directly' then 'Create policy' and a new window will open. In this new window choose the following options then click 'Review policy', give the policy a name and click 'Create policy':
    * Service: Secrets Manager
