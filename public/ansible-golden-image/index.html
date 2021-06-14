@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+  <meta name="description" content="A collection of things that I’ve worked on and interesting projects that you may find useful.">
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.danieljw.net/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.danieljw.net/favicon-32x32.png">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.danieljw.net/favicon-16x16.png">
+
+  
+  <link rel="manifest" href="https://www.danieljw.net/site.webmanifest">
+
+  
+  <link rel="mask-icon" href="https://www.danieljw.net/safari-pinned-tab.svg" color="#5bbad5">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="stylesheet" href="https://www.danieljw.net/css/bootstrap.min.css" />
+
+  
+  <title>Ansible golden image config replacements | danieljw.net</title>
+  
+
+  <style>
+body {
+  min-width: 300px;
+}
+
+.custom-navbar {
+  margin-bottom: 1em;
+  height: 60px;
+}
+
+.custom-navbar a {
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: 1em; 
+  font-weight: bold; 
+}
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  text-decoration: none; 
+}
+
+@media print {
+  .custom-navbar {
+    display: none;
+  }
+}
+
+article {
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  background-color: #FAFAFA;
+}
+
+
+
+body {
+  color: #212529;
+}
+
+
+
+a {
+  color: #007bff;
+}
+
+
+
+a:hover,
+a:focus {
+  color: #0056b3;
+}
+
+
+
+.custom-navbar {
+  background-color: #336699;
+}
+
+
+
+.custom-navbar a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+
+.container {
+  max-width: 800px;
+}
+
+
+
+pre {
+  display: block;
+  padding: 9.5px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+code {
+  padding: 2px 4px;
+  color: inherit; 
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .9em;
+}
+
+
+
+blockquote,
+.blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 1em;
+  border-left: 5px solid #6c757d;
+}
+
+</style>
+</head>
+
+<body>
+  <nav class="custom-navbar">
+  <div class="container">
+    
+    <a href="/">Posts</a>
+    
+    <a href="https://github.com/djw4">Projects</a>
+    
+  </div>
+</nav>
+  
+  <div class="container">
+    <article>
+      <h1>Ansible golden image config replacements</h1>
+<p>
+  <small class="text-secondary">
+  
+  
+  Nov 20, 2018
+  </small>
+  
+</p>
+<p>ConfigServer Security &amp; Firewall is a popular wrapper for iptables, especially when used in conjunction with the hosting platform cPanel. The &lsquo;firewall&rsquo; itself is very feature rich and contains different abilities, some of which can be difficult to keep track of ..</p>
+
+<pre><code class="language-bash">[root@server ~]# wc -l /etc/csf/csf.conf
+2645 /etc/csf/csf.conf
+</code></pre>
+
+<p>To this end it might make sense to keep your &lsquo;golden image&rsquo; for the config file in version control in the event that settings change and need to be rolled back. Whilst this is a simple way to manage the configuration, there are certain lines in the config file that may need to be kept consistent in-between versions.</p>
+
+<p>The Ansible playbook below does just that; it replaces the existing configuration file with one from a repository, but before doing so it extracts and registers some information from the outgoing config and places that in the new config.</p>
+
+<script type="application/javascript" src="//gist.github.com/djw4/0804423557a869a449c44853b4b1e4c7.js"></script>
+
+<p>In this case the example is for <code>SMTP_ALLOWUSER</code> but the same workflow is very repeatable for any other playbook that needs to transfer information.</p>
+
+    </article>
+  </div>
+
+  
+  
+  
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-123456789-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#216942",
+      "text": "#b2d192"
+    },
+    "button": {
+      "background": "#afed71"
+    }
+  }
+})});
+</script>
+
+</body>
+
+</html>

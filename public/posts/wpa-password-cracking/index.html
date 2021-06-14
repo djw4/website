@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta name="generator" content="Hugo 0.53" />
+
+  
+  <meta name="description" content="A collection of things that I’ve worked on and interesting projects that you may find useful.">
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.danieljw.net/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.danieljw.net/favicon-32x32.png">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.danieljw.net/favicon-16x16.png">
+
+  
+  <link rel="manifest" href="https://www.danieljw.net/site.webmanifest">
+
+  
+  <link rel="mask-icon" href="https://www.danieljw.net/safari-pinned-tab.svg" color="#5bbad5">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="stylesheet" href="https://www.danieljw.net/css/bootstrap.min.css" />
+
+  
+  <title>Cracking WPA/WPA2 Hashes using GPUs | danieljw.net</title>
+  
+
+  <style>
+body {
+  min-width: 300px;
+}
+
+.custom-navbar {
+  margin-bottom: 1em;
+  height: 60px;
+}
+
+.custom-navbar a {
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: 1em; 
+  font-weight: bold; 
+}
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  text-decoration: none; 
+}
+
+@media print {
+  .custom-navbar {
+    display: none;
+  }
+}
+
+article {
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  background-color: #FAFAFA;
+}
+
+
+
+body {
+  color: #212529;
+}
+
+
+
+a {
+  color: #007bff;
+}
+
+
+
+a:hover,
+a:focus {
+  color: #0056b3;
+}
+
+
+
+.custom-navbar {
+  background-color: #336699;
+}
+
+
+
+.custom-navbar a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+
+.container {
+  max-width: 800px;
+}
+
+
+
+pre {
+  display: block;
+  padding: 9.5px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+code {
+  padding: 2px 4px;
+  color: inherit; 
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .9em;
+}
+
+
+
+blockquote,
+.blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 1em;
+  border-left: 5px solid #6c757d;
+}
+
+</style>
+</head>
+
+<body>
+  <nav class="custom-navbar">
+  <div class="container">
+    
+    <a href="/">Posts</a>
+    
+    <a href="https://github.com/djw4">Projects</a>
+    
+  </div>
+</nav>
+  
+  <div class="container">
+    <article>
+      <h1>Cracking WPA/WPA2 Hashes using GPUs</h1>
+<p>
+  <small class="text-secondary">
+  
+  
+  Nov 21, 2016
+  </small>
+  
+</p>
+<p>Cracking WPA/WPA2 Hashes using GPUs</p>
+
+<p>Recently I have been investigating the most effective way to crack WPA passkeys, and I wanted to know - what is the most cost effective method for hashing the key; purchasing a GPU(s) or using a cloud based service such as AWS.</p>
+
+<p>I first began by capturing the 4-way handshake from the target AP using Kali Linux and <code>airmon-ng</code>, and stored this on my computer. I performed my baseline crack using a conventional system with the following specifications:</p>
+
+<ul>
+<li>Windows 10 Pro</li>
+<li>GeForce GTX 980 (4GB Memory, 2048 CUDA cores, ~1100Mhz clock without boost)</li>
+<li>Intel 4770k @ 4.4GHz</li>
+<li>16GB RAM</li>
+</ul>
+
+<p>Using hashcat as my hash cracking software, the crack was successful using a brute-force keyspace attack with an approximate cracking time of 12 hours, and an actual cracking time of approximately 3 hours.</p>
+
+<p>The computer was able to sustain approximately 220kH/s.</p>
+
+<ul>
+<li>GTX 980 - 2048 CUDA Cores
+
+<ul>
+<li>~$500 purchase price</li>
+</ul></li>
+<li>GTX 980Ti - 2816 CUDA Cores
+
+<ul>
+<li>~$1000 purchase price</li>
+</ul></li>
+<li>GTX 1080 - 2560 CUDA Cores
+
+<ul>
+<li>~$800 purchase price</li>
+</ul></li>
+<li>GTX Titan X - 3072 CUDA Cores
+
+<ul>
+<li>~1600 purchase price</li>
+</ul></li>
+<li>AWS g2.8xlarge EC2 - 6144 CUDA Cores (4x 1536)
+
+<ul>
+<li>~$31 for 12 hours, ~$1900 per month</li>
+</ul></li>
+</ul>
+
+<p>Using the approximate recommend retail value of the cards I’ve listed above, it seems that the GTX 980 is perfectly positioned as the best ‘bang for buck’ card I’ve investigated, with other newer cards not providing enough of an increase in performance in this application to offset their significantly more expensive cost.</p>
+
+<p>A second alternative would be using a server from AWS in the g2.8xlarge combination to perform incidental cracks, but in this case the job would have cost approximately $31AUD it’s up to the user to decide whether that is worthwhile or not.</p>
+
+    </article>
+  </div>
+
+  
+  
+  
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-127724108-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#216942",
+      "text": "#b2d192"
+    },
+    "button": {
+      "background": "#afed71"
+    }
+  }
+})});
+</script>
+
+</body>
+
+</html>
