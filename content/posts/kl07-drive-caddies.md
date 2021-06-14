@@ -18,7 +18,11 @@ Whilst it might be an odd choice for prototyping things of this nature, I've use
 
 This is what it looks like in version 1:
 
+<<<<<<< HEAD:content/posts/kl07-drive-caddies.md
 ![Drive Caddy Prototype](/img/unraid-hs5QFXMH.jpg)
+=======
+![Drive Caddy Prototype]({static}/images/unraid-hs5QFXMH.jpg)
+>>>>>>> master:content/kl07-drive-caddies.md
 
 You can see that I've used a mix of CD jewel cases with DVD cases to form a box, within which the edge of the GPU pokes into. The front of this box is open to the front of the case allowing for cool air to be pulled in direct to the GPU from the front of the case.
 
@@ -58,7 +62,11 @@ I know that the distance between the leading edge of the top panel, and the 'bas
 
 Silverstone was kind enough to help me with the measurement of this case, even before I had purchased it - amazing support from a company that I totally didn't expect.
 
+<<<<<<< HEAD:content/posts/kl07-drive-caddies.md
 ![Silverstone KL07 Gmail](/img/unraid-nmcba97k.png)
+=======
+![Silverstone KL07 Gmail]({static}/images/unraid-nmcba97k.png)
+>>>>>>> master:content/kl07-drive-caddies.md
 
 I've purchased other cases from Silverstone in the past (FT-02, TJ-08E) and built in countless others as a system builder here in Melbourne and you won't find my systems in anything else. Nothing else on the market competes in terms of quality and price as far as I'm concerned.
 

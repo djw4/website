@@ -1,0 +1,35 @@
+# name: deploy-website
+
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
+    
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+    
+#     env:
+#       AWS_REGION: ${{ secrets.AWS_REGION }}
+
+#     steps:
+#       - uses: actions/checkout@v2
+
+#       - name: compile images and theme
+#         run: |
+#           make build-images
+#           make build-theme
+      
+#       - name: compile site
+#         run: |
+#           make build
+
+#       - name: upload site to s3
+#         uses: shallwefootball/upload-s3-action@v1.1.2
+#         with:
+#           aws_key_id: ${{ secrets.AWS_ACCESS_KEY }}
+#           aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
+#           aws_bucket: ${{ secrets.AWS_BUCKET_NAME }}
+#           source_dir: output
+#           # destination_dir: test
