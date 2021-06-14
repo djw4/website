@@ -1,7 +1,6 @@
-output/
-venv/
+.DS_Store
+public/
+resources/
 .vagrant/
 theme/
 *.log
-__pycache__/
-.DS_Store

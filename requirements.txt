@@ -1,6 +1,0 @@
-pelican[Markdown]
-typogrify
-pelican-gist
-css-html-js-minify
-bs4
-requests

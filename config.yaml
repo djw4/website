@@ -1,0 +1,35 @@
+baseurl: "https://www.danieljw.net/"
+languageCode: "en-us"
+title: "danieljw.net"
+theme: "hugo-tania"
+googleAnalytics: "UA-127724108-1"
+
+params:
+  titleEmoji: '👽'
+  enableFootnotes: true
+  author: "Daniel W"
+
+  socialOptions:
+    github: "https://github.com/djw4"
+    linkedin: "https://www.linkedin.com/in/djw1"
+    email: "web@danieljw.net"
+    # dev-to: "https://dev.to/djw4"
+
+menu:
+  header:
+    - name: All Posts
+      url: "/articles/"
+  footer:
+    - name: RSS
+      url: "/index.xml"
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+  goldmark:
+    renderer:
+      unsafe: true
+
+# outputs:
+#   home: ["HTML", "RSS", "JSON"]

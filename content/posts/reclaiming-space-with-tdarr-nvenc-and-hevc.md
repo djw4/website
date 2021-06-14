@@ -64,16 +64,16 @@ I set tdar to run against my _entire_ collection of movies and after 3 days of c
 
 This means that I have transcoded roughly 1/3 of my movies library, beginning with the largest and working down from there so the reclaimation will obviously taper off as the program encodes smaller and smaller files. I am still aiming for a 2TB of reclaimation though, this will leave ~3.5TB of free space on the array.
 
-![tdarr stats page]({static}/images/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-05_22-30-31.png)
+![tdarr stats page](/img/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-05_22-30-31.png)
 
-![tdarr stats page]({static}/images/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-05_22-30-41.png)
+![tdarr stats page](/img/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-05_22-30-41.png)
 
 
 I'll leave this run for the rest of this week and see how things go and perhaps in a day or two bump up the number of simulteanous transcodes from 4 to 8 considering the files will be much smaller.
 
 In the meantime however, this is exactly what I wanted to see (direct play for both the video and audio streams) - happy day.
 
-![plex status page]({static}/images/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-06_09-42-05.png)
+![plex status page](/img/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-06_09-42-05.png)
 
 - - - -
 
@@ -81,7 +81,7 @@ In the meantime however, this is exactly what I wanted to see (direct play for b
 
 The transcode queue is finished (for now) and now we can have a look at the results.
 
-![tdarr stats page]({static}/images/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-10_10-32-42.png)
+![tdarr stats page](/img/reclaiming-space-with-tdarr-nvenc-and-hevc-2020-07-10_10-32-42.png)
 
 Out of a total of 616 files, 535 were transcoded to HEVC which in turn has reclaimed a whopping 2.76TB of space on the array!
 
