@@ -1,16 +1,11 @@
-1. `docker compose up -d`
-2. Available at http://localhost:4000/
+# danieljw.net
 
-```
-Alternatively use:
-docker run --name hexo -d -p 4000:4000 \
--v '/hexo/posts:/opt/hexo/ipple1986/source/_posts' \
--v '/hexo/themes:/opt/hexo/ipple1986/themes' \
--v '/hexo/_config.yml:/opt/hexo/ipple1986/_config.yml' \
-ipple1986/hexo
-```
+## Install
 
-```
-Add a sub-module          #  git submodule add https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
-Update all sub-modules    #  git submodule update --init --recursive
-```
+1. `brew install hugo`
+2. `git submodule update --init --recursive`
+3. `hugo serve`
+
+## Update Theme
+
+1. `git submodule update --recursive --remote`

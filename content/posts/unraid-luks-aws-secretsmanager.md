@@ -22,22 +22,22 @@ Inspiration for this process was the great tutorial available by Spaceinvader On
 1. The first step is to ensure that you have the array decryption key recorded correctly - this is a 'no-brainer' as otherwise your server will be inaccessible.
 2. Create an AWS account, if you don't already have one (hint: you can use this same account for offsite-backups as well!) and log into the console.
 3. From the console, use the search box to find 'Secrets Manager. Click on 'Store a new secret', and then use the  wizard to create your key - remember to take note of the key/value pair when creating the key and also to ensure there are no typos. Use the screenshots below to guide you if needed.
-![aws630]({static}/images/unraid-luks-aws630.jpg)
-![aws712]({static}/images/unraid-luks-aws712.jpg)
-![aws740]({static}/images/unraid-luks-aws740.jpg)
-![aws753]({static}/images/unraid-luks-aws753.jpg)
+![aws630](/img/unraid-luks-aws630.jpg)
+![aws712](/img/unraid-luks-aws712.jpg)
+![aws740](/img/unraid-luks-aws740.jpg)
+![aws753](/img/unraid-luks-aws753.jpg)
 
 1. Click on your newly created secret, and make a note of the 'ARN' (Amazon Resource Number) - this is the full identifier to this resource and we will need it later. 
 2. Next use the search again to find the 'IAM' module, then click 'Users -> Add user'.
 3. Give your user a name (not really important, but name it appropriately), and tick 'Programmatic access' then click next.
-![aws708]({static}/images/unraid-luks-aws708.jpg)
+![aws708](/img/unraid-luks-aws708.jpg)
 
 7. Click on 'Attach existing policies directly' then 'Create policy' and a new window will open. In this new window choose the following options then click 'Review policy', give the policy a name and click 'Create policy':
    * Service: Secrets Manager
    * Actions: READ
    * Resources: 'Specific' -> 'Add ARN to restrict access' (then paste in your recorded ARN)
    * Request conditions: 'Source IP' (add your public IP address)
-   ![aws7122]({static}/images/unraid-luks-aws7122.jpg)
+   ![aws7122](/img/unraid-luks-aws7122.jpg)
 
 
 8. With the IAM policy created, close the window and refresh the 'Add user' wizard, and select your new policy.
@@ -46,7 +46,7 @@ Inspiration for this process was the great tutorial available by Spaceinvader On
 #### Unraid Web GUI
 
 1. From the Unraid web GUI, click on 'Plugins' then 'Nerd Tools'. If you don't have Nerd Tools already, you can install it from the community applications module. If you don't have that either, there are plenty of guides to help you install that first.
-![aws715]({static}/images/unraid-luks-aws715.jpg)
+![aws715](/img/unraid-luks-aws715.jpg)
 
 
 2. Use the search box on the Nerd Tools page to find `python3` and `jq-onig`, flick both to 'On' and click apply.
